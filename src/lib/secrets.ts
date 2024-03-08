@@ -39,16 +39,6 @@ export const putDatabaseUrl = async (stage: string, databaseUrl: string) => {
 
 		const parameterData: PutParameterCommandInput = {
 			Name: databaseUrlParam,
-			Tags: [
-				{
-					Key: 'app',
-					Value: 'aws-node-express-api-project'
-				},
-				{
-					Key: 'stage',
-					Value: paramStage
-				}
-			],
 			Value: databaseUrl,
 			Type: 'SecureString',
 			Overwrite: true
